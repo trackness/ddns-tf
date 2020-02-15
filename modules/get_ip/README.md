@@ -18,5 +18,5 @@ The following outputs are exported:
 
 ### home\_ip
 
-Description: Retrieves the external IP address of the machine on which the module is run.
+Description: The external IP address of the local network.
 
