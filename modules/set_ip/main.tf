@@ -1,4 +1,7 @@
-variable "home_ip" { type = string }
+variable "home_ip" {
+  type = string
+  default = ""
+}
 variable "route_53_urls" { type = set(string) }
 
 data aws_route53_zone "hosted_zones" {
