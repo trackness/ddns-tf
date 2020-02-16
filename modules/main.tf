@@ -1,5 +1,5 @@
 variable "hosted_zones" {
-  type = list(string)
+  type = set(string)
   default = []
 }
 

@@ -2,7 +2,10 @@ variable "home_ip" {
   type = string
   default = ""
 }
-variable "route_53_urls" { type = set(string) }
+variable "route_53_urls" {
+  type = set(string)
+  default = []
+}
 
 data aws_route53_zone "hosted_zones" {
   for_each = var.route_53_urls
