@@ -1,8 +1,10 @@
 variable "home_ip" {
+  description = "The external IP address of the local network."
   type = string
-  default = ""
 }
+
 variable "route_53_urls" {
+  description = "The Route53 URLs to which the record sets will be applied."
   type = set(string)
   default = []
 }
