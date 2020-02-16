@@ -1,3 +1,27 @@
+# ddns-tf
+
+A home DDNS for Route53 URLs powered by Terraform.
+
+The external IP of the network in which the job is run will be added as an 'A' record for any URLs included in the config.yaml file.
+
+When scheduled, this module emulates the behavior of a traditional DDNS, provided the above external IP is unaffected by any complex routing (e.g. VPN).
+
+## Instructions
+
+1. Install the [Terraform CLI](https://www.terraform.io/downloads.html)
+2. Ensure you have defined local AWS credentials
+3. If you have not initialised Terraform in the directory, run ```Terraform init```
+
+### Single run
+
+1. Run ```Terraform plan```
+2. Review the planned changes
+3. Run ```Terraform apply```
+
+### Scheduled run (OS X)
+
+1. Apply a [cron job](https://www.adminschoice.com/crontab-quick-reference) to call ```Terraform apply -auto-approve``` at the desired frequency
+
 ## Providers
 
 No provider.
