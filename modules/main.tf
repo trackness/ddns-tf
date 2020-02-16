@@ -1,4 +1,5 @@
 variable "hosted_zones" {
+  description = "The Route53 URLs to which the record sets will be applied."
   type = set(string)
   default = []
 }
